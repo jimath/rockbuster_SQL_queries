@@ -1,0 +1,36 @@
+#Sales figures by country
+
+SELECT COUNT(payment.rental_id), country.country
+FROM payment
+INNER JOIN rental ON payment.rental_id = rental.rental_id
+INNER JOIN customer ON customer.customer_id = rental.customer_id
+INNER JOIN address ON address.address_id = customer.address_id
+INNER JOIN city ON city.city_id = address.city_id
+INNER JOIN country ON country.country_id = city.country_id
+GROUP BY country.country
+ORDER BY country.country;
+
+
+#Revenue by film genre
+
+SELECT category.name, SUM(payment.amount)
+FROM payment
+INNER JOIN rental ON payment.rental_id = rental.rental_id
+INNER JOIN inventory ON rental.inventory_id = inventory.inventory_id
+INNER JOIN film ON inventory.film_id = film.film_id
+INNER JOIN film_category ON film_category.film_id = film.film_id
+INNER JOIN category ON film_category.category_id = category.category_id
+GROUP BY category.name
+ORDER BY SUM(payment.amount) DESC;
+
+
+#Top 10 countries with customer numbers
+
+SELECT country.country, count(DISTINCT customer_id) customer_count
+FROM customer
+INNER JOIN address ON address.address_id = customer.address_id
+INNER JOIN city ON city.city_id = address.city_id
+INNER JOIN country ON country.country_id = city.country_id
+GROUP BY country.country
+ORDER BY 2 DESC
+LIMIT 10;
