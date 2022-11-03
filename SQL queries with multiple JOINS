@@ -34,3 +34,23 @@ INNER JOIN country ON country.country_id = city.country_id
 GROUP BY country.country
 ORDER BY 2 DESC
 LIMIT 10;
+
+
+#Top 10 customers in top 10 cities
+
+SELECT B.customer_id,
+    B.first_name,
+    B.last_name,
+    D.city,
+    E.country,
+    SUM(A.amount) AS "Total Amount Paid"
+FROM payment A
+INNER JOIN customer B ON A.customer_id = B.customer_id
+INNER JOIN address C ON B.address_id = C.address_id
+INNER JOIN city D ON C.city_id = D.city_id
+INNER JOIN country E ON D.country_id = E.country_id
+WHERE city IN('Aurora','Atlixco','Tokat','Tarsus','Emeishan','Pontianak','Shimoga','Aparecida de Goinia','Zalantum','Taguig')
+GROUP BY B.customer_id, D.city, E.country
+ORDER BY SUM(A.amount) DESC
+LIMIT 5;
+
