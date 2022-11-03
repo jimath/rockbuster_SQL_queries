@@ -2,9 +2,11 @@ Rockbuster - SQL Queries
 
 Data Analysis practice project conducted in SQL.
 
+
 Objective
 
 Rockbuster Stealth LLC is a movie rental company that used to have stores around the world. It is now planning to use its extensive movie catalogue to launch an online video rental service in order to stay competitive.
+
 
 Business Questions and Key Objectives
 
@@ -17,6 +19,7 @@ Business Questions and Key Objectives
 ● Where are customers with a high lifetime value based?
 
 ● Do sales figures vary between geographic regions?
+
 
 Data
 
