@@ -21,6 +21,5 @@ Business Questions and Key Objectives
 Data
 
 A relational database containing data on Rockbuster-owned films, film contributors, customers, customer transactions etc.
-Complete Data Set 
 
 Project viz link: https://public.tableau.com/app/profile/dimitrios.athanasoulias/viz/CFTask3_10/Revenueandcustomersbycountry
