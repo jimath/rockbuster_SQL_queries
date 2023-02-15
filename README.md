@@ -23,4 +23,4 @@ Rockbuster Stealth LLC is a movie rental company that used to have stores around
 A relational database containing data on Rockbuster-owned films, film contributors, customers, customer transactions etc. The [data] (https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip) is provided by provided by Careerfoundry.
 
 ## Project visualization
-# https://public.tableau.com/app/profile/dimitrios.athanasoulias/viz/CFTask3_10/Revenueandcustomersbycountry
+## https://public.tableau.com/app/profile/dimitrios.athanasoulias/viz/CFTask3_10/Revenueandcustomersbycountry
